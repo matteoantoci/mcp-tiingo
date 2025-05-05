@@ -1,5 +1,4 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { z } from 'zod';
 import { endOfDayTool } from './endOfDay.js';
 import { newsTool } from './news.js';
 import { forexPricesTool } from './forexPrices.js';
@@ -11,14 +10,7 @@ import { fundamentalsMetaTool } from './fundamentalsMeta.js';
 import { dividendsDistributionsTool } from './dividendsDistributions.js';
 import { dividendsYieldTool } from './dividendsYield.js';
 import { splitsTool } from './splits.js';
-
-type TiingoToolDefinition = {
-  name: string;
-  description: string;
-  inputSchemaShape: z.ZodRawShape;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  handler: (input: any) => Promise<any>;
-};
+import { TiingoToolDefinition } from './types.js';
 
 const tiingoTools: TiingoToolDefinition[] = [
   endOfDayTool,
