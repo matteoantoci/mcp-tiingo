@@ -18,33 +18,19 @@ A Model Context Protocol (MCP) server that exposes various [Tiingo API](https://
     npm install
     ```
 
-3.  **Set Tiingo API Key:**
-    This server requires your Tiingo API key.
-    *   If running the server **directly**, set the `TIINGO_API_TOKEN` environment variable in your shell:
-        ```bash
-        # Example for bash/zsh
-        export TIINGO_API_TOKEN="YOUR_API_KEY_HERE"
-        ```
-        *(Replace `YOUR_API_KEY_HERE` with your actual Tiingo API key)*
-    *   If running the server **via an MCP client**, you can typically provide the API key in the client's configuration (see "Via MCP runner" below).
+3.  **Obtain Tiingo API Key:**
+    Each user must have their own API token. Once a user registers for Tiingo, guide them to this page to obtain their API Token: Account - API Token (https://www.tiingo.com/account/api/token). You may then allow the user to paste their API token in your software and then use their API token to obtain Tiingo data. We do not allow programmatic registration or logins due to security concerns so the API token is the only way to authenticate users.
 
-4.  **Build the server:**
+4.  **Set Tiingo API Key:**
+    This server requires your Tiingo API key. You can typically provide the API key in your MCP client's configuration (see "Running the Server" below for an example).
+
+5.  **Build the server:**
     ```bash
     npm run build
     ```
     This will create a `build` directory with the compiled JavaScript code.
 
 ## Running the Server
-
-- **Directly:**
-  ```bash
-  npm run start
-  ```
-  or
-  ```bash
-  node build/index.js
-  ```
-  *(Ensure the `TIINGO_API_TOKEN` environment variable is set in the shell where you run this command)*
 
 - **Via MCP runner:**
   Configure your MCP client to run the server using stdio transport. You can provide the `TIINGO_API_TOKEN` in the `env` block of the configuration.
