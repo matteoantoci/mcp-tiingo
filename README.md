@@ -18,8 +18,12 @@ A Model Context Protocol (MCP) server that exposes various [Tiingo API](https://
     npm install
     ```
 
-3.  **Obtain Tiingo API Key:**
-    Each user must have their own API token. Once a user registers for Tiingo, guide them to this page to obtain their API Token: Account - API Token (https://www.tiingo.com/account/api/token). You may then allow the user to paste their API token in your software and then use their API token to obtain Tiingo data. We do not allow programmatic registration or logins due to security concerns so the API token is the only way to authenticate users.
+3.  **Obtain Your Tiingo API Key:**
+    To use this server, you need a Tiingo API token.
+    1.  Register for a Tiingo account if you don't have one.
+    2.  Go to your Tiingo Account page and navigate to the API Token section (or directly visit: https://www.tiingo.com/account/api/token).
+    3.  Copy your API Token. You will need to provide this token to your MCP client to authenticate with the Tiingo API.
+*Note: Programmatic registration or logins are not supported by Tiingo; the API token is the sole method for authentication.*
 
 4.  **Set Tiingo API Key:**
     This server requires your Tiingo API key. You can typically provide the API key in your MCP client's configuration (see "Running the Server" below for an example).
