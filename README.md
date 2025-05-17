@@ -7,7 +7,7 @@ A Model Context Protocol (MCP) server that exposes various [Tiingo API](https://
 - Node.js (v18 or later recommended)
 - npm (comes with Node.js)
 - A Tiingo API Key
-- (Optional) MCP-compatible client or runner (e.g., VSCode extension, CLI)
+- MCP-compatible client or runner (e.g., VSCode extension, CLI)
 
 ## Setup
 
